@@ -1,0 +1,19 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body
+    class="m-auto bg-amber-100 prose prose-sm prose-p:leading-4 max-w-xl prose-headings:font-normal prose-headings:tracking-tighter prose-p:tracking-tight prose-lead:leading-[1.15rem] prose-headings:text-red-600 prose-p:text-red-600"
+  >
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
